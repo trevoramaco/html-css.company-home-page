@@ -1,0 +1,357 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #c6c1c1;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header #logo {
+    font-size: 1.5rem;
+    font-family: "Roboto Mono", monospace;
+    color: #4a4a4a;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav a {
+    font-size: 1rem;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+nav a.button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: gray;
+    color: white;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden on large screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #4a4a4a;
+  border-radius: 2px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #c6c1c1;
+  text-align: center;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+  padding: 1rem 0;
+}
+
+.mobile-menu a {
+  font-size: 1rem;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 700px) {
+  nav.desktop {
+    display: none; /* Hide desktop navigation */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .mobile-menu {
+    display: none; /* Initially hidden */
+  }
+
+  .mobile-menu.show {
+    display: block; /* Show mobile menu when toggled */
+  }
+}
+
+/* Main */
+main {
+    padding-top: 4.5rem; /* Offset for fixed header */
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 35rem;
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h1 {
+    color: white;
+    margin: 2rem;
+    font-size: 4rem;
+    max-width: 50ch;
+}
+
+/* Mission Section */
+#mission {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#mission h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#mission p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+#services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    justify-items: center;
+}
+
+#services .service-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensure rounded corners apply to images */
+    text-align: center;
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+#services .service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensure image fits nicely */
+}
+
+#services .service-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+#services .service-card p {
+    font-size: 1rem;
+    padding: 0 1rem 1.5rem;
+    color: #666;
+}
+
+#services .service-card:hover {
+    transform: translateY(-10px); /* Lift card slightly on hover */
+}
+
+@media (max-width: 768px) {
+    #services .service-card {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    #services h1 {
+        font-size: 2rem; /* Scale down title */
+    }
+}
+
+/* Team Section */
+#team {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+#team h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#team .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#team .image-container {
+    flex: 1 1 300px;
+    height: 300px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1650px) {
+    #team .image-container {
+        max-width: 300px;
+        flex: 1 1 300px;
+    }
+
+}
+
+#team #jdoe {
+    background-image: url("../images/team_headshots/ceo.jpg");
+}
+
+#team #bapple {
+    background-image: url("../images/team_headshots/cfo.jpg");
+    background-position: center 4%;
+}
+
+#team #msmith {
+    background-image: url("../images/team_headshots/lead_engineer.jpg");
+    background-position: center 4%;
+}
+
+#team #sbaker {
+    background-image: url("../images/team_headshots/designer_1.jpg");
+    background-position: center 15%;
+}
+
+#team #abenson {
+    background-image: url("../images/team_headshots/designer_2.jpg");
+}
+
+#team .description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+#contact .content {
+    display: flex;
+    gap: 1rem; /* Reduce the gap between the image and the contact details */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Stack items vertically on smaller screens */
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#contact .contact_details {
+    flex: 1 1 300px; /* Responsive width */
+    text-align: left; /* Align text to the left */
+    padding: 1.5rem; /* Add padding around the details */
+    font-size: 1.25rem; /* Increase font size for better readability */
+    line-height: 2; /* Add more space between lines */
+}
+
+#contact .contact_details h1 {
+    font-size: 2rem; /* Make the "Contact Us" title larger */
+    margin-bottom: 1rem; /* Add space below the title */
+}
+
+#contact .contact_details p {
+    font-size: 1rem;
+    margin-bottom: 0.75rem; /* Add spacing between each paragraph */
+}
+
+#contact img {
+    flex: 1 1 300px; /* Responsive width for the image */
+    height: 300px; /* Fixed height for a square look */
+    object-fit: cover; /* Maintain aspect ratio, fill container */
+    object-position: center; /* Center the image */
+    border-radius: 0.5rem; /* Add some rounded corners */
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1rem;
+}
+

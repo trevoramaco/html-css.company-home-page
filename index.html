@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sirius Networks</title>
+    <link rel="stylesheet" href="static/css/styles.css"/>
+</head>
+<body>
+<header>
+    <div class="content">
+        <span id="logo">Sirius Networks</span>
+        <nav class="desktop">
+            <ul>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact" class="button">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- Hamburger menu for mobile -->
+        <div class="hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- Mobile menu -->
+        <nav class="mobile-menu hidden">
+          <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="banner">
+        <h1>Leave the network to us.</h1>
+    </div>
+    <section id="mission">
+        <h1>Mission</h1>
+        <p>
+            Our mission is to help you get the most out of your network investment.
+            Let the network drive your business, and <strong>leave
+            the network to us.</strong>
+        </p>
+    </section>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h1>Services</h1>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <img src="static/images/services/networking.jpg" alt="Networking">
+                    <h2>Networking Solutions</h2>
+                    <p>Design, implement, and optimize secure and scalable networks tailored to your business needs.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <img src="static/images/services/cloud.jpg" alt="Cloud Services">
+                    <h2>Cloud Services</h2>
+                    <p>Migrate to the cloud with confidence. We ensure seamless and secure cloud integration for your
+                        business.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <img src="static/images/services/cybersecurity.jpg" alt="Cybersecurity">
+                    <h2>Cybersecurity</h2>
+                    <p>Protect your critical assets with our comprehensive cybersecurity solutions and risk
+                        assessments.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <img src="static/images/services/consulting.jpg" alt="IT Consulting">
+                    <h2>IT Consulting</h2>
+                    <p>Leverage our expertise to create IT strategies that align with your business goals and drive
+                        results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h1>Our Team</h1>
+        <div class="images-container">
+            <div class="image-container" id="jdoe">
+                <div class="description">
+                    <h2>John Doe</h2>
+                    <h3><i>CEO</i></h3>
+                </div>
+            </div>
+            <div class="image-container" id="bapple">
+                <div class="description">
+                    <h2>Bill Appleseed</h2>
+                    <h3><i>CFO</i></h3>
+                </div>
+            </div>
+            <div class="image-container" id="msmith">
+                <div class="description">
+                    <h2>Mark Smith</h2>
+                    <h3><i>Lead Engineer</i></h3>
+                </div>
+            </div>
+            <div class="image-container" id="sbaker">
+                <div class="description">
+                    <h2>Sally Baker</h2>
+                    <h3><i>Network Architect</i></h3>
+                </div>
+            </div>
+            <div class="image-container" id="abenson">
+                <div class="description">
+                    <h2>Alice Benson</h2>
+                    <h3><i>Network Architect</i></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="content">
+            <div class="contact_details">
+                <h1>Contact Us</h1>
+                <p>3078 Boundary Street, Jacksonville, Florida</p>
+                <p>904-594-6732</p>
+                <p>contact@allystudio.com</p>
+            </div>
+            <img src="static/images/contact_us.jpg" alt="Contact Us"/>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>© 2025 Sirius Networks. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
+
+<script>
+  function toggleMobileMenu() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.toggle('show');
+  }
+</script>
